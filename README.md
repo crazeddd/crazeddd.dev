@@ -1,0 +1,2 @@
+# crazeddd.dev
+My site
