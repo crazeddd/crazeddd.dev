@@ -1,2 +1,2 @@
 # crazeddd.dev
-My site
+Personal Site
