@@ -155,15 +155,21 @@ nav {
   grid-template-columns: 1fr auto 1fr;
 }
 
-nav div {
+nav > div {
   display: flex;
   align-items: center;
   gap: 2rem;
   padding: 1.5rem 0 1.5rem 0;
 }
 
-nav div:nth-child(3) {
+nav > div:nth-child(3) {
   justify-content: right;
+}
+
+footer {
+  align-self: center;
+  justify-self: center;
+  padding: 2rem 0 2rem 0;
 }
 
 .hero {
@@ -178,13 +184,32 @@ nav div:nth-child(3) {
   padding: 8%;
 }
 
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 48%);
+  padding: 8rem 0 8rem 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.showcase > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.showcase > div:nth-child(1) {
+  flex: 50%;
+}
+
 /* button */
 
 button {
   padding: 0.75rem 2rem 0.75rem 2rem;
   border-radius: 0.5rem;
-  
 }
+
+/* general styles */
 
 .primary {
   background: var(--acc-p);

@@ -1,7 +1,4 @@
-import './style.css'
-import { setupCounter } from './counter.ts'
-
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+(function(){const s=document.createElement("link").relList;if(s&&s.supports&&s.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const i of t.addedNodes)i.tagName==="LINK"&&i.rel==="modulepreload"&&o(i)}).observe(document,{childList:!0,subtree:!0});function r(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?t.credentials="include":e.crossOrigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function o(e){if(e.ep)return;e.ep=!0;const t=r(e);fetch(e.href,t)}})();function c(n){let s=0;const r=o=>{s=o,n.innerHTML=`count is ${s}`};n.addEventListener("click",()=>r(s+1)),r(0)}document.querySelector("#app").innerHTML=`
   <nav>
     <div>
       <h5>.dev</h5>
@@ -39,6 +36,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
   </section>
   <footer>Built and designed with <3 by crazeddd</footer>
-`
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+`;c(document.querySelector("#counter"));
