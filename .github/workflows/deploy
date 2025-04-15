@@ -23,7 +23,11 @@ jobs:
         run: npm install
 
       - name: Build app
-        run: npm build   
+        run: npm build
+
+      - name: Add CNAME
+        run: echo 'crazeddd.dev' > dist/CNAME
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
