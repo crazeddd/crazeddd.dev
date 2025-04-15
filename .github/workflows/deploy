@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Build app
-        run: npm build
+        run: npm run build
 
       - name: Add CNAME
         run: echo 'crazeddd.dev' > dist/CNAME
