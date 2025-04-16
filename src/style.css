@@ -4,7 +4,9 @@
   color-scheme: light dark;
 
   --bg: #02010a;
+  --bg-s: #151322;
   --txt: #fff;
+  --txt-m: #8b8b8b;
   --acc-p: #3f37c9;
   --border: #686a78;
 
@@ -42,7 +44,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+big {
   font-family: "Special Gothic Expanded One";
   font-weight: 700;
 }
@@ -72,6 +75,10 @@ h5 {
   font-size: 1.333rem;
   /* 21.28px */
   line-height: 2.5rem;
+}
+
+big {
+  font-size: 6rem;
 }
 
 small {
@@ -130,6 +137,11 @@ input {
   padding: 1rem;
 }
 
+pre {
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}
+
 grid {
   z-index: -1;
   height: 100%;
@@ -145,7 +157,7 @@ grid {
 
 nav,
 section {
-  margin: 0 15vw 0 15vw;
+  margin: 0 20% 0 20%;
 }
 
 /* nav */
@@ -158,12 +170,22 @@ nav {
 nav > div {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 1.5rem 0 1.5rem 0;
+}
+
+nav > div:nth-child(2) {
+  gap: 2rem;
 }
 
 nav > div:nth-child(3) {
   justify-content: right;
+}
+
+.pfp {
+  height: 1.5lh;
+  width: 1.5lh;
+  border-radius: 50%;
 }
 
 footer {
@@ -175,18 +197,21 @@ footer {
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  text-wrap: pretty;
   padding: 6rem 0 8rem 0;
   background: conic-gradient(var(--acc-p) 20%, var(--bg) 50%);
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .hero > div {
   padding: 8%;
 }
 
+
+/* showcase section */
+
 .showcase {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 48%);
+  grid-template-columns: repeat(auto-fill, 31.9%);
   padding: 8rem 0 8rem 0;
   gap: 2rem;
   flex-wrap: wrap;
@@ -195,11 +220,32 @@ footer {
 .showcase > div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 1rem;
 }
 
 .showcase > div:nth-child(1) {
   flex: 50%;
+}
+
+/* about section */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about > div {
+  flex: 49%;
+}
+
+.about > div:nth-child(2) {
+  padding: 8%;
+}
+
+.code-box {
+  background: var(--bg-s);
+  border-radius: 0.5rem 0 0 0.5rem;
+  padding: 5%;
 }
 
 /* button */
@@ -235,6 +281,10 @@ button {
 
 .gp-3 {
   gap: 3rem;
+}
+
+.muted {
+  color: var(--txt-m);
 }
 
 .stroke {
