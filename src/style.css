@@ -35,6 +35,7 @@ body,
   height: 100%;
   width: 100%;
   font-size: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -42,10 +43,10 @@ body {
   background: var(--bg);
   color: var(--txt);
   font-family: "Special Gothic";
-  overflow-x: hidden;
 }
 
-#app {}
+#app {
+}
 
 h1,
 h2,
