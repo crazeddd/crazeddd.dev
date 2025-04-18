@@ -4,7 +4,7 @@
   --bg: light-dark(#f0fff1, #02010a);
   --bg-s: #1b192b;
   --txt: light-dark(#050508, #fff);
-  --txt-m: #8b8b8b;
+  --txt-m: #9b9a9a;
   --acc-p: #3f37c9;
   --border: #686a78;
   --warn: #fae73e;
@@ -108,6 +108,7 @@ button,
 p {
   font-size: 0.95rem;
   line-height: 1.5rem;
+  text-wrap: pretty;
 }
 
 img {
@@ -207,7 +208,7 @@ nav {
 nav>div {
   display: flex;
   align-items: center;
-  gap: 0.1rem;
+  gap: 1rem;
   padding: 1.5rem 0 1.5rem 0;
 }
 
@@ -295,9 +296,58 @@ footer {
   flex-direction: column;
   background: linear-gradient(var(--acc-p) 25%, var(--bg) 95%);
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   border-radius: 0.5rem;
   padding: 8%;
+}
+
+/* carousel */
+
+carousel {
+  padding: 8rem 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(30, 4rem);
+  position: relative;
+  width: 100%;
+  gap: 8rem;
+  overflow-x: clip;
+}
+
+carousel::before,
+carousel::after {
+  content: "";
+  background: linear-gradient(to right,
+      var(--bg) 0%,
+      rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  z-index: 2;
+}
+
+carousel::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+carousel::before {
+  left: 0;
+  top: 0;
+}
+
+carousel>i {
+  animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc((-4rem * 10) + (-8rem * 10)));
+  }
 }
 
 /* button */
@@ -313,9 +363,8 @@ button {
 
 .overlay {
   position: absolute;
-  background: var(--acc-p);
   font-size: 0.9rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .bottom-left {
@@ -366,10 +415,26 @@ button {
   color: transparent;
 }
 
+/* mobile kinda */
 @media(max-width: 1000px) {
-
   nav,
   section {
     margin: 0 5% 0 5%;
+  }
+
+  nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav div:nth-child(2) {
+    display: none;
+  }
+}
+
+/* big screen */
+@media(min-width: 2000px) {
+  nav,
+  section {
+    margin: 0 25% 0 25%;
   }
 }
