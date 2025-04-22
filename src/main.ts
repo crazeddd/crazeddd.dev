@@ -39,15 +39,16 @@ body {
 }
         </code>
     </pre>-->
-<announcement>Site Under Construction ⚠️</announcement>
+<grid></grid>
+<!--<announcement>Site Under Construction ⚠️</announcement>-->
 <nav>
     <div>
         <img class="pfp" src="/73705334.jpg">
         <h5>Crazed</h5>
     </div>
     <div class="muted">
-        <a>About</a>
         <a>Links</a>
+        <a>Blog</a>
         <a>Projects</a>
     </div>
     <div>
@@ -83,11 +84,11 @@ body {
     </div>
     <div class="column gp-2">
         <h2>About Me</h2>
-        <p class="muted">Many years ago now I gained a passion for coding and computer systems, this eventually leading to me
-            branching out to robotics and other software/hardware driven programs. Apart from web development I also
-            speciallize in server/system administration and have extensive networking knowledge. In addition to coding I
-            also enjoy design and making music in my spare time. Always open to help with coding or just talking about
-            anything on discord @crazeddd :)</p>
+        <p class="muted">Many years ago now I gained a passion for coding and computer systems, this eventually led me
+            to branch out into robotics and other software/hardware driven programs. While I enjoy web development I
+            also specialize in server/system administration and have extensive (computer) networking knowledge. When I'm
+            not coding I enjoy design and making music in my spare time. Always open to help with coding or just chat on
+            Discord @crazeddd :)</p>
     </div>
 </section>
 <carousel>
@@ -124,6 +125,23 @@ body {
     <i class="fa-brands fa-node-js fa-4x"></i>
     <i class="fa-brands fa-linux fa-4x"></i>
 </carousel>
+<section class="projects">
+    <h1>Projects</h1>
+    <div>
+        <img src="/kibi.png">
+        <div>
+                <h2>Kibi Host <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h2>
+            <p class="muted">A small server host that aims at giving quality server hosting at a cheap price.</p>
+        </div>
+    </div>
+    <div>
+        <img src="/simple.png">
+        <div>
+            <h2>Simple Panel <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h2>
+            <p class="muted">A simple lightweight Docker container manager, built with game servers in mind.</p>
+        </div>
+    </div>
+</section>
 <section class="contact-me">
     <div>
         <h1>Lets Talk</h1>
@@ -133,8 +151,8 @@ body {
     </div>
 </section>
 <footer>
-    <p>Made with <3 by Crazed</p>
-            <small class="muted">Copyright © 2025 All rights reserved. <a>License.</a></small>
+    <p>Made with <i class="fa-solid fa-heart"></i> by Crazed</p>
+    <small class="muted">Copyright © 2025 All rights reserved. <a>License.</a></small>
 </footer>
 `
 

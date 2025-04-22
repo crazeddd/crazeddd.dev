@@ -1,4 +1,4 @@
-(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))t(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const r of s.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&t(r)}).observe(document,{childList:!0,subtree:!0});function i(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function t(a){if(a.ep)return;a.ep=!0;const s=i(a);fetch(a.href,s)}})();function o(n){let e=0;const i=t=>{e=t,n.innerHTML=`count is ${e}`};n.addEventListener("click",()=>i(e+1)),i(0)}document.querySelector("#app").innerHTML=`
+(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))t(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const n of s.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&t(n)}).observe(document,{childList:!0,subtree:!0});function e(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function t(a){if(a.ep)return;a.ep=!0;const s=e(a);fetch(a.href,s)}})();function o(r){let i=0;const e=t=>{i=t,r.innerHTML=`count is ${i}`};r.addEventListener("click",()=>e(i+1)),e(0)}document.querySelector("#app").innerHTML=`
 <!--<pre class="code" id="one"><code>
     &lt;section class="hero"&gt;
     &lt;div class="column gp-3"&gt;
@@ -36,15 +36,16 @@ body {
 }
         </code>
     </pre>-->
-<announcement>Site Under Construction ⚠️</announcement>
+<grid></grid>
+<!--<announcement>Site Under Construction ⚠️</announcement>-->
 <nav>
     <div>
         <img class="pfp" src="/73705334.jpg">
         <h5>Crazed</h5>
     </div>
     <div class="muted">
-        <a>About</a>
         <a>Links</a>
+        <a>Blog</a>
         <a>Projects</a>
     </div>
     <div>
@@ -80,11 +81,11 @@ body {
     </div>
     <div class="column gp-2">
         <h2>About Me</h2>
-        <p class="muted">Many years ago now I gained a passion for coding and computer systems, this eventually leading to me
-            branching out to robotics and other software/hardware driven programs. Apart from web development I also
-            speciallize in server/system administration and have extensive networking knowledge. In addition to coding I
-            also enjoy design and making music in my spare time. Always open to help with coding or just talking about
-            anything on discord @crazeddd :)</p>
+        <p class="muted">Many years ago now I gained a passion for coding and computer systems, this eventually led me
+            to branch out into robotics and other software/hardware driven programs. While I enjoy web development I
+            also specialize in server/system administration and have extensive (computer) networking knowledge. When I'm
+            not coding I enjoy design and making music in my spare time. Always open to help with coding or just chat on
+            Discord @crazeddd :)</p>
     </div>
 </section>
 <carousel>
@@ -121,6 +122,23 @@ body {
     <i class="fa-brands fa-node-js fa-4x"></i>
     <i class="fa-brands fa-linux fa-4x"></i>
 </carousel>
+<section class="projects">
+    <h1>Projects</h1>
+    <div>
+        <img src="/kibi.png">
+        <div>
+                <h2>Kibi Host <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h2>
+            <p class="muted">A small server host that aims at giving quality server hosting at a cheap price.</p>
+        </div>
+    </div>
+    <div>
+        <img src="/simple.png">
+        <div>
+            <h2>Simple Panel <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h2>
+            <p class="muted">A simple lightweight Docker container manager, built with game servers in mind.</p>
+        </div>
+    </div>
+</section>
 <section class="contact-me">
     <div>
         <h1>Lets Talk</h1>
@@ -130,7 +148,7 @@ body {
     </div>
 </section>
 <footer>
-    <p>Made with <3 by Crazed</p>
-            <small class="muted">Copyright © 2025 All rights reserved. <a>License.</a></small>
+    <p>Made with <i class="fa-solid fa-heart"></i> by Crazed</p>
+    <small class="muted">Copyright © 2025 All rights reserved. <a>License.</a></small>
 </footer>
 `;o(document.querySelector("#counter"));
