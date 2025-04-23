@@ -1,4 +1,4 @@
-(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))t(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const n of s.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&t(n)}).observe(document,{childList:!0,subtree:!0});function e(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function t(a){if(a.ep)return;a.ep=!0;const s=e(a);fetch(a.href,s)}})();function o(r){let i=0;const e=t=>{i=t,r.innerHTML=`count is ${i}`};r.addEventListener("click",()=>e(i+1)),e(0)}document.querySelector("#app").innerHTML=`
+(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))t(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const e of s.addedNodes)e.tagName==="LINK"&&e.rel==="modulepreload"&&t(e)}).observe(document,{childList:!0,subtree:!0});function r(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function t(a){if(a.ep)return;a.ep=!0;const s=r(a);fetch(a.href,s)}})();document.querySelector("#app").innerHTML=`
 <!--<pre class="code" id="one"><code>
     &lt;section class="hero"&gt;
     &lt;div class="column gp-3"&gt;
@@ -37,16 +37,16 @@ body {
         </code>
     </pre>-->
 <grid></grid>
-<!--<announcement>Site Under Construction ⚠️</announcement>-->
+<announcement>Site Under Construction ⚠️</announcement>
 <nav>
     <div>
         <img class="pfp" src="/73705334.jpg">
         <h5>Crazed</h5>
     </div>
     <div class="muted">
-        <a>Links</a>
+        <a href="#links">Links</a>
         <a>Blog</a>
-        <a>Projects</a>
+        <a href="#projects">Projects</a>
     </div>
     <div>
         <i class="fa-solid fa-bars fa-xl"></i>
@@ -122,7 +122,7 @@ body {
     <i class="fa-brands fa-node-js fa-4x"></i>
     <i class="fa-brands fa-linux fa-4x"></i>
 </carousel>
-<section class="projects">
+<section class="projects" id="projects">
     <h1>Projects</h1>
     <div>
         <img src="/kibi.png">
@@ -139,9 +139,9 @@ body {
         </div>
     </div>
 </section>
-<section class="contact-me">
+<section class="contact-me" id="links">
     <div>
-        <h1>Lets Talk</h1>
+        <h1>Socials</h1>
         <div class="row gp-1">
             <i class="fa-brands fa-discord fa-xl"></i>
         </div>
@@ -151,4 +151,4 @@ body {
     <p>Made with <i class="fa-solid fa-heart"></i> by Crazed</p>
     <small class="muted">Copyright © 2025 All rights reserved. <a>License.</a></small>
 </footer>
-`;o(document.querySelector("#counter"));
+`;

@@ -1,5 +1,4 @@
 import './style.css'
-import { setupCounter } from './counter.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <!--<pre class="code" id="one"><code>
@@ -40,16 +39,16 @@ body {
         </code>
     </pre>-->
 <grid></grid>
-<!--<announcement>Site Under Construction ⚠️</announcement>-->
+<announcement>Site Under Construction ⚠️</announcement>
 <nav>
     <div>
         <img class="pfp" src="/73705334.jpg">
         <h5>Crazed</h5>
     </div>
     <div class="muted">
-        <a>Links</a>
+        <a href="#links">Links</a>
         <a>Blog</a>
-        <a>Projects</a>
+        <a href="#projects">Projects</a>
     </div>
     <div>
         <i class="fa-solid fa-bars fa-xl"></i>
@@ -125,7 +124,7 @@ body {
     <i class="fa-brands fa-node-js fa-4x"></i>
     <i class="fa-brands fa-linux fa-4x"></i>
 </carousel>
-<section class="projects">
+<section class="projects" id="projects">
     <h1>Projects</h1>
     <div>
         <img src="/kibi.png">
@@ -142,9 +141,9 @@ body {
         </div>
     </div>
 </section>
-<section class="contact-me">
+<section class="contact-me" id="links">
     <div>
-        <h1>Lets Talk</h1>
+        <h1>Socials</h1>
         <div class="row gp-1">
             <i class="fa-brands fa-discord fa-xl"></i>
         </div>
@@ -155,5 +154,3 @@ body {
     <small class="muted">Copyright © 2025 All rights reserved. <a>License.</a></small>
 </footer>
 `
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
