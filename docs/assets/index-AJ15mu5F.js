@@ -127,16 +127,30 @@ body {
     <div>
         <img src="/kibi.png">
         <div>
-                <h2>Kibi Host <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h2>
-            <p class="muted">A small server host that aims at giving quality server hosting at a cheap price.</p>
+            <div>
+                <h3><a>Kibi Host</a> <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h3>
+                <p class="muted">A small server host that aims at giving quality server hosting at a cheap price.</p>
+            </div>
+            <div class="row gp-1">
+                <i class="fa-brands fa-react fa-xl"></i>
+                <i class="fa-brands fa-rust fa-xl"></i>
+            </div>
         </div>
     </div>
     <div>
         <img src="/simple.png">
         <div>
-            <h2>Simple Panel <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h2>
+        <div>
+            <h3><a>Simple Panel</a> <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h3>
             <p class="muted">A simple lightweight Docker container manager, built with game servers in mind.</p>
+            </div>
+            <div class="row gp-1">
+                <i class="fa-brands fa-docker fa-xl"></i>
+                <i class="fa-brands fa-react fa-xl"></i>
+                <i class="fa-brands fa-node-js fa-xl"></i>
+            </div>
         </div>
+        
     </div>
 </section>
 <section class="contact-me" id="links">
