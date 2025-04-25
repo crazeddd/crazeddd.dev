@@ -1,5 +1,6 @@
 (function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))t(a);new MutationObserver(a=>{for(const s of a)if(s.type==="childList")for(const e of s.addedNodes)e.tagName==="LINK"&&e.rel==="modulepreload"&&t(e)}).observe(document,{childList:!0,subtree:!0});function r(a){const s={};return a.integrity&&(s.integrity=a.integrity),a.referrerPolicy&&(s.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?s.credentials="include":a.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function t(a){if(a.ep)return;a.ep=!0;const s=r(a);fetch(a.href,s)}})();document.querySelector("#app").innerHTML=`
-<!--<pre class="code" id="one"><code>
+<!--<div class="code-wrapper">
+<pre class="code" id="one"><code>
     &lt;section class="hero"&gt;
     &lt;div class="column gp-3"&gt;
         &lt;h1&gt;Full Stack Dev and &lt;span class="stroke"&gt;Web Designer&lt;/span&gt;&lt;/h1&gt;
@@ -35,7 +36,8 @@ body {
   overflow-x: hidden;
 }
         </code>
-    </pre>-->
+    </pre>
+    </div>-->
 <grid></grid>
 <announcement>Site Under Construction ⚠️</announcement>
 <nav>
@@ -155,9 +157,11 @@ body {
 </section>
 <section class="contact-me" id="links">
     <div>
-        <h1>Socials</h1>
-        <div class="row gp-1">
-            <i class="fa-brands fa-discord fa-xl"></i>
+        <h1>Links</h1>
+        <div class="row gp-1">  
+            <a href="https://github.com/crazeddd" target="#blank"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="" target="#blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            <a href="https://codepen.io/crazeddd" target="#blank" ><i class="fa-brands fa-codepen fa-xl"></i></a>
         </div>
     </div>
 </section>

@@ -1,7 +1,8 @@
 import './style.css'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<!--<pre class="code" id="one"><code>
+<!--<div class="code-wrapper">
+<pre class="code" id="one"><code>
     &lt;section class="hero"&gt;
     &lt;div class="column gp-3"&gt;
         &lt;h1&gt;Full Stack Dev and &lt;span class="stroke"&gt;Web Designer&lt;/span&gt;&lt;/h1&gt;
@@ -37,7 +38,8 @@ body {
   overflow-x: hidden;
 }
         </code>
-    </pre>-->
+    </pre>
+    </div>-->
 <grid></grid>
 <announcement>Site Under Construction ⚠️</announcement>
 <nav>
@@ -157,9 +159,11 @@ body {
 </section>
 <section class="contact-me" id="links">
     <div>
-        <h1>Socials</h1>
-        <div class="row gp-1">
-            <i class="fa-brands fa-discord fa-xl"></i>
+        <h1>Links</h1>
+        <div class="row gp-1">  
+            <a href="https://github.com/crazeddd" target="#blank"><i class="fa-brands fa-github fa-xl"></i></a>
+            <a href="" target="#blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            <a href="https://codepen.io/crazeddd" target="#blank" ><i class="fa-brands fa-codepen fa-xl"></i></a>
         </div>
     </div>
 </section>
