@@ -1,47 +1,168 @@
+import hljs from 'highlight.js/lib/common';
+
 import './style.css'
 
+const highlightedCode = hljs.highlight(
+    `<section class="hero">
+    <div class="column gp-3">
+        <h1>Full Stack Dev and <span class="stroke">Web Designer</span></h1>
+        <div class="row gp-1">
+            <button class="primary">Contact Me</button>
+            <button>Resume</button>
+        </div>
+    </div>
+</section>`,
+    { language: 'html' }
+  ).value
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<!--<div class="code-wrapper">
-<pre class="code" id="one"><code>
-    &lt;section class="hero"&gt;
-    &lt;div class="column gp-3"&gt;
-        &lt;h1&gt;Full Stack Dev and &lt;span class="stroke"&gt;Web Designer&lt;/span&gt;&lt;/h1&gt;
-        &lt;div class="row gp-1"&gt;
-            &lt;button class="primary"&gt;Contact Me&lt;/button&gt;
-            &lt;button&gt;Resume&lt;/button&gt;
+<div class="code-wrapper">
+    <pre class="code" id="one"><code>
+        ${highlightedCode}
+        </code></pre>
+
+    <pre class="code" id="two">
+            <code>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html,
+    body,
+    #app {
+      height: 100%;
+      width: 100%;
+      font-size: 100%;
+    }
+    
+    body {
+      color-scheme: dark;
+      background: var(--bg);
+      color: var(--txt);
+      font-family: "Special Gothic";
+      overflow-x: hidden;
+    }
+            </code>
+        </pre>
+
+    <pre class="code" id="one"><code>
+        &lt;section class="hero"&gt;
+        &lt;div class="column gp-3"&gt;
+            &lt;h1&gt;Full Stack Dev and &lt;span class="stroke"&gt;Web Designer&lt;/span&gt;&lt;/h1&gt;
+            &lt;div class="row gp-1"&gt;
+                &lt;button class="primary"&gt;Contact Me&lt;/button&gt;
+                &lt;button&gt;Resume&lt;/button&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-    </code></pre>
+    &lt;/section&gt;
+        </code></pre>
 
-<pre class="code" id="two">
-        <code>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+    <pre class="code" id="two">
+            <code>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html,
+    body,
+    #app {
+      height: 100%;
+      width: 100%;
+      font-size: 100%;
+    }
+    
+    body {
+      color-scheme: dark;
+      background: var(--bg);
+      color: var(--txt);
+      font-family: "Special Gothic";
+      overflow-x: hidden;
+    }
+            </code>
+        </pre>
 
-html,
-body,
-#app {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-}
+    <pre class="code" id="one"><code>
+        &lt;section class="hero"&gt;
+        &lt;div class="column gp-3"&gt;
+            &lt;h1&gt;Full Stack Dev and &lt;span class="stroke"&gt;Web Designer&lt;/span&gt;&lt;/h1&gt;
+            &lt;div class="row gp-1"&gt;
+                &lt;button class="primary"&gt;Contact Me&lt;/button&gt;
+                &lt;button&gt;Resume&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+        </code></pre>
 
-body {
-  color-scheme: dark;
-  background: var(--bg);
-  color: var(--txt);
-  font-family: "Special Gothic";
-  overflow-x: hidden;
-}
-        </code>
-    </pre>
-    </div>-->
+    <pre class="code" id="two">
+            <code>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html,
+    body,
+    #app {
+      height: 100%;
+      width: 100%;
+      font-size: 100%;
+    }
+    
+    body {
+      color-scheme: dark;
+      background: var(--bg);
+      color: var(--txt);
+      font-family: "Special Gothic";
+      overflow-x: hidden;
+    }
+            </code>
+        </pre>
+
+    <pre class="code" id="one"><code>
+            &lt;section class="hero"&gt;
+            &lt;div class="column gp-3"&gt;
+                &lt;h1&gt;Full Stack Dev and &lt;span class="stroke"&gt;Web Designer&lt;/span&gt;&lt;/h1&gt;
+                &lt;div class="row gp-1"&gt;
+                    &lt;button class="primary"&gt;Contact Me&lt;/button&gt;
+                    &lt;button&gt;Resume&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+            </code></pre>
+
+    <pre class="code" id="two">
+                <code>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+        
+        html,
+        body,
+        #app {
+          height: 100%;
+          width: 100%;
+          font-size: 100%;
+        }
+        
+        body {
+          color-scheme: dark;
+          background: var(--bg);
+          color: var(--txt);
+          font-family: "Special Gothic";
+          overflow-x: hidden;
+        }
+                </code>
+            </pre>
+</div>
 <grid></grid>
-<announcement>Site Under Construction ⚠️</announcement>
+<!--<announcement>Site Under Construction ⚠️</announcement>-->
 <nav>
     <div>
         <img class="pfp" src="/73705334.jpg">
@@ -81,14 +202,16 @@ body {
 </section>
 <section class="about">
     <div>
-        <img src="">
+        <img src="/82327129.jpg">
     </div>
     <div class="column gp-2">
         <h2>About Me</h2>
-        <p class="muted">Many years ago now I gained a passion for coding and computer systems, this eventually led me
-            to branch out into robotics and other software/hardware driven programs. While I enjoy web development I
-            also specialize in server/system administration and have extensive (computer) networking knowledge. When I'm
-            not coding I enjoy design and making music in my spare time. Always open to help with coding or just chat on
+        <p class="muted">Hi I'm Crann (Crazed) a Japanese American highschooler with a passion for coding and computer
+            systems. I enjoy participating in robotics and other software/hardware driven programs. While I do currently
+            mainly do web development
+            I also specialize in server/system administration. When I'm
+            not coding I'm either designing, making music or reading in my spare time. Always open to help with coding
+            or just chat on
             Discord @crazeddd :)</p>
     </div>
 </section>
@@ -144,9 +267,9 @@ body {
     <div>
         <img src="/simple.png">
         <div>
-        <div>
-            <h3><a>Simple Panel</a> <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h3>
-            <p class="muted">A simple lightweight Docker container manager, built with game servers in mind.</p>
+            <div>
+                <h3><a>Simple Panel</a> <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h3>
+                <p class="muted">A simple lightweight Docker container manager, built with game servers in mind.</p>
             </div>
             <div class="row gp-1">
                 <i class="fa-brands fa-docker fa-xl"></i>
@@ -154,16 +277,16 @@ body {
                 <i class="fa-brands fa-node-js fa-xl"></i>
             </div>
         </div>
-        
+
     </div>
 </section>
 <section class="contact-me" id="links">
     <div>
         <h1>Links</h1>
-        <div class="row gp-1">  
+        <div class="row gp-1">
             <a href="https://github.com/crazeddd" target="#blank"><i class="fa-brands fa-github fa-xl"></i></a>
             <a href="" target="#blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-            <a href="https://codepen.io/crazeddd" target="#blank" ><i class="fa-brands fa-codepen fa-xl"></i></a>
+            <a href="https://codepen.io/crazeddd" target="#blank"><i class="fa-brands fa-codepen fa-xl"></i></a>
         </div>
     </div>
 </section>
