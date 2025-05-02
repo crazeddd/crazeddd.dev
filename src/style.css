@@ -36,7 +36,7 @@ html,
 body,
 #app {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   font-size: 100%;
   scroll-behavior: smooth;
   overflow-x: clip;
@@ -184,12 +184,15 @@ announcement {
 
 @keyframes flow {
   0% {
+    -webkit-clip-path: polygon(72% 43%, 59% 100%, 22% 89%, 18% 52%, 89% 32%, 0 0);
     clip-path: polygon(72% 43%, 59% 100%, 22% 89%, 18% 52%, 89% 32%, 0 0);
   }
   50% {
+    -webkit-clip-path: polygon(77% 18%, 79% 53%, 18% 100%, 0 28%, 85% 88%, 27% 12%);
     clip-path: polygon(77% 18%, 79% 53%, 18% 100%, 0 28%, 85% 88%, 27% 12%);
   }
   100% {
+    -webkit-clip-path: polygon(72% 43%, 59% 100%, 22% 89%, 18% 52%, 89% 32%, 0 0);
     clip-path: polygon(72% 43%, 59% 100%, 22% 89%, 18% 52%, 89% 32%, 0 0);
   }
 }
