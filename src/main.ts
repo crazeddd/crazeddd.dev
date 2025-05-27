@@ -1,4 +1,4 @@
-import hljs from 'highlight.js/lib/common';
+// import hljs from 'highlight.js/lib/common';
 import * as THREE from 'three';
 const root = document.querySelector(':root');
 
@@ -16,6 +16,21 @@ function submitForm(event: Event) {
     const mailtoLink = `mailto:${email}?subject=${message}`;
     window.location.href = mailtoLink;
 }
+
+// function toggleLike(event: MouseEvent) {
+//     const target = event.target as HTMLElement;
+
+//     if (target.classList.contains('liked')) {
+//         target.classList.remove('liked');
+//     } else {
+//         target.classList.add('liked');
+//     }
+
+//     const likeCountEle = document.getElementById("like-count") as HTMLParagraphElement;
+
+    
+// }
+
 
 function resizeRendererToDisplaySize(renderer: THREE.WebGLRenderer) {
     const canvas = renderer.domElement;
@@ -115,15 +130,15 @@ document.addEventListener('DOMContentLoaded', () => {
 (window as any).displayModal = displayModal;
 (window as any).submitForm = submitForm;
 
-const highlightedCode = hljs.highlight(
-    `<section class="hero">
-    <div class="column gp-3">
-        <h1>Full Stack Dev and <span class="stroke">Web Designer</span></h1>
-        <div class="row gp-1">
-            <button class="primary">Contact Me</button>
-            <button>Resume</button>
-        </div>
-    </div>
-</section>`,
-    { language: 'html' }
-).value;
+// const highlightedCode = hljs.highlight(
+//     `<section class="hero">
+//     <div class="column gp-3">
+//         <h1>Full Stack Dev and <span class="stroke">Web Designer</span></h1>
+//         <div class="row gp-1">
+//             <button class="primary">Contact Me</button>
+//             <button>Resume</button>
+//         </div>
+//     </div>
+// </section>`,
+//     { language: 'html' }
+// ).value;

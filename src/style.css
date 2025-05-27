@@ -198,121 +198,6 @@ announcement {
   opacity: 10%;
 }
 
-.planetary-system {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 434px;
-  left: -217px;
-  top: 0;
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 50%);
-  display: none;
-}
-
-.planet_3-orbit,
-.planet_3,
-.planet_2-orbit,
-.planet_2,
-.moon_2-orbit,
-.moon_2,
-.planet_1-orbit,
-.planet_1,
-.sun {
-  border-radius: 100%;
-  position: absolute;
-}
-
-.sun {
-  width: 70px;
-  height: 70px;
-  background: white;
-}
-
-.planet_1-orbit {
-  opacity: 75%;
-  border: 1px solid lightgrey;
-  animation: orbit 4.3s linear infinite;
-  width: 145px;
-  height: 145px;
-}
-
-.planet_1 {
-  width: 25px;
-  height: 25px;
-  transform: translate(100px);
-  background: white;
-}
-
-.planet_2-orbit {
-  opacity: 75%;
-  border: 1px solid lightgrey;
-  animation: orbit 5.4s linear infinite;
-  width: 275px;
-  height: 275px;
-}
-
-.planet_2 {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  width: 40px;
-  height: 40px;
-  transform: translate(190px);
-  background: white;
-}
-
-.moon_2-orbit {
-  border: 1px solid lightgrey;
-  animation: orbit 10s linear infinite;
-  width: 60px;
-  height: 60px;
-}
-
-.moon_2 {
-  width: 10px;
-  height: 10px;
-  transform: translate(40px);
-  background: white;
-}
-
-/*.planet_dec-2{
-  width: 10px;
-  height: 10px;
-  z-index: 10;
-  transform: translate(5px);
-  background: lightblue;
-} */
-
-.planet_3-orbit {
-  opacity: 75%;
-  border: 1px solid lightgrey;
-  animation: orbit 6.2s linear infinite;
-  width: 400px;
-  height: 400px;
-}
-
-.planet_3 {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  width: 30px;
-  height: 30px;
-  transform: translate(260px);
-  background: white;
-}
-
-@keyframes orbit {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 
 nav,
 section {
@@ -553,7 +438,6 @@ carousel {
   width: 100%;
   gap: 8rem;
   overflow-x: clip;
-  color: var(--txt-m);
 }
 
 carousel::before,
@@ -711,7 +595,7 @@ button.nav {
 }
 
 /* mobile kinda */
-@media(max-width: 1000px) {
+@media(max-width: 1200px) {
 
   nav,
   section {

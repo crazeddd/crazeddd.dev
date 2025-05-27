@@ -50,8 +50,8 @@
     <div>
       <div class="button-wrapper">
         <i class="fa-solid fa-moon"></i>
-        <button class="nav">
-          <p>0</p>
+        <button class="nav" onclick="toggleLike()">
+          <p id="like-count">0</p>
           <i class="fa-solid fa-heart"></i>
         </button>
       </div>
@@ -62,24 +62,7 @@
   </nav>
   <section class="hero">
     <grid></grid>
-    <div class="planetary-system">
-      <div class="sun"></div>
-      <div class="planet_1-orbit">
-        <div class="planet_1"></div>
-      </div>
-      <div class="planet_2-orbit">
-        <div class="planet_2">
-          <div class="moon_2-orbit">
-            <div class="moon_2"></div>
-          </div>
-        </div>
-      </div>
-      <div class="planet_3-orbit">
-        <div class="planet_3">
-        </div>
-      </div>
-    </div>
-    <!-- <i class="overlay circle top-left"></i> -->
+    <i class="overlay circle top-left"></i>
     <i class="overlay plus bottom-right"></i>
     <div class="column gp-3">
       <h1>Full Stack Dev and <br><span class="stroke">Web Designer</span></h1>
@@ -168,7 +151,7 @@
             <tag>SolidJs</tag>
             <tag>MongoDB</tag>
             <tag>Docker</tag>
-             <div class="break"></div>
+            <div class="break"></div>
             <tag>Pterodactyl</tag>
             <tag>Traefik</tag>
           </div>
