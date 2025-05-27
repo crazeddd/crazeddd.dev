@@ -10,12 +10,189 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>crazeddd.dev</title>
-  <script type="module" crossorigin src="/assets/index-CFCohDH5.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Cmj-Ks88.css">
+  <script type="module" crossorigin src="/assets/index-CX6synpv.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-ZlJlJEYF.css">
 </head>
 
-<body>
-  <div id="app"></div>
+<body class="stars">
+
+  <div class="code-wrapper">
+    <pre class="code" id="one"><code>
+        </code></pre>
+  </div>
+
+  <div class="modal" class="hide">
+    <form onsubmit="submitForm(event)">
+      <div>
+        <h2>Lets Talk</h2>
+        <p class="muted">I'll try to get back within 24 hours.</p>
+      </div>
+      <textarea placeholder="Message" name="message" id="message"></textarea>
+      <div class="row">
+        <button class="primary" onclick="displayModal()">Send Email</button>
+        <button onclick="displayModal()" type="button">Cancel</button>
+      </div>
+      <small><span class="muted">In the case you dont have a default email app, reach me manually at
+        </span>cranninja@gmail.com</small>
+    </form>
+  </div>
+
+  <!-- <announcement>Site Under Construction ⚠️</announcement> -->
+  <nav>
+    <div>
+      <img class="pfp">
+      <h5>CRAZED</h5>
+    </div>
+    <div class="muted gp-2">
+      <a href="#links">Links</a>
+      <a>Blog</a>
+      <a href="#projects">Projects</a>
+    </div>
+    <div>
+      <div class="button-wrapper">
+        <i class="fa-solid fa-moon"></i>
+        <button class="nav" onclick="toggleLike()">
+          <p id="like-count">0</p>
+          <i class="fa-solid fa-heart"></i>
+        </button>
+      </div>
+    </div>
+    <div>
+      <i class="fa-solid fa-bars fa-xl"></i>
+    </div>
+  </nav>
+  <section class="hero">
+    <grid></grid>
+    <i class="overlay circle top-left"></i>
+    <i class="overlay plus bottom-right"></i>
+    <div class="column gp-3">
+      <h1>Full Stack Dev and <br><span class="stroke">Web Designer</span></h1>
+      <div class="row gp-1">
+        <button class="primary" onclick="displayModal()">Contact Me</button>
+        <button>Resume</button>
+      </div>
+    </div>
+  </section>
+  <section class="showcase">
+    <div>
+      <big>5+</big>
+      <p class="muted">Years programming</p>
+    </div>
+    <div>
+      <big>3+</big>
+      <p class="muted">Years building websites</p>
+    </div>
+    <div>
+      <big>6+</big>
+      <p class="muted">Years running servers</p>
+    </div>
+  </section>
+  <section class="about">
+    <div>
+      <canvas id="render"></canvas>
+    </div>
+    <div class="column gp-2">
+      <h2>About Me</h2>
+      <p class="muted">Hi I'm Crann (Crazed) a Japanese American highschooler with a passion for coding and computer
+        systems. I enjoy participating in robotics and other software/hardware driven programs. While I do currently
+        mainly do web development
+        I also specialize in server/system administration. When I'm
+        not coding I'm either designing, making music or reading in my spare time. Always open to help with coding
+        or just chat on
+        Discord @crazeddd :)</p>
+    </div>
+  </section>
+  <carousel>
+    <i class="fa-brands fa-js fa-4x"></i>
+    <i class="fa-brands fa-java fa-4x"></i>
+    <i class="fa-brands fa-html5 fa-4x"></i>
+    <i class="fa-brands fa-css fa-4x"></i>
+    <i class="fa-brands fa-ubuntu fa-4x"></i>
+    <i class="fa-brands fa-python fa-4x"></i>
+    <i class="fa-brands fa-docker fa-4x"></i>
+    <i class="fa-brands fa-react fa-4x"></i>
+    <i class="fa-brands fa-node-js fa-4x"></i>
+    <i class="fa-brands fa-linux fa-4x"></i>
+
+    <i class="fa-brands fa-js fa-4x"></i>
+    <i class="fa-brands fa-java fa-4x"></i>
+    <i class="fa-brands fa-html5 fa-4x"></i>
+    <i class="fa-brands fa-css fa-4x"></i>
+    <i class="fa-brands fa-ubuntu fa-4x"></i>
+    <i class="fa-brands fa-python fa-4x"></i>
+    <i class="fa-brands fa-docker fa-4x"></i>
+    <i class="fa-brands fa-react fa-4x"></i>
+    <i class="fa-brands fa-node-js fa-4x"></i>
+    <i class="fa-brands fa-linux fa-4x"></i>
+
+    <i class="fa-brands fa-js fa-4x"></i>
+    <i class="fa-brands fa-java fa-4x"></i>
+    <i class="fa-brands fa-html5 fa-4x"></i>
+    <i class="fa-brands fa-css fa-4x"></i>
+    <i class="fa-brands fa-ubuntu fa-4x"></i>
+    <i class="fa-brands fa-python fa-4x"></i>
+    <i class="fa-brands fa-docker fa-4x"></i>
+    <i class="fa-brands fa-react fa-4x"></i>
+    <i class="fa-brands fa-node-js fa-4x"></i>
+    <i class="fa-brands fa-linux fa-4x"></i>
+  </carousel>
+  <section class="projects" id="projects">
+    <div>
+    </div>
+    <div>
+      <div class="column gp-2">
+        <i class="overlay plus top-left"></i>
+        <img src="/kibi.png">
+        <div class="column gp-2">
+          <div>
+            <h4><a>Kibi Host</a> <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h4>
+            <p class="muted">A small server host that aims at giving quality server hosting at a cheap price.</p>
+          </div>
+          <div class="row wrap gp-0-5">
+            <tag>SolidJs</tag>
+            <tag>MongoDB</tag>
+            <tag>Docker</tag>
+            <div class="break"></div>
+            <tag>Pterodactyl</tag>
+            <tag>Traefik</tag>
+          </div>
+        </div>
+      </div>
+      <div class="column gp-2">
+        <img src="/simple.png">
+        <div class="column gp-2">
+          <i class="overlay plus bottom-right"></i>
+          <div>
+            <a href="https://github.com/crazeddd/simple-minecraft-panel" target="_blank">
+              <h4>Simple Panel <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i></h4>
+            </a>
+            <p class="muted">A simple lightweight Docker container manager, built with game servers in mind.</p>
+          </div>
+          <div class="row wrap gp-0-5">
+            <tag>React</tag>
+            <tag>Express</tag>
+            <tag>SQLite</tag>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="links" id="links">
+    <div>
+      <h2>Links</h2>
+      <hr>
+      <div class="row gp-1">
+        <a href="https://github.com/crazeddd" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a href="" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+        <a href="https://codepen.io/crazeddd" target="_blank"><i class="fa-brands fa-codepen fa-xl"></i></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Made with <i class="fa-solid fa-heart"></i> by Crazed</p>
+    <small class="muted">Copyright © 2025 All rights reserved. <a>License.</a></small>
+  </footer>
+
 </body>
 
 </html>
