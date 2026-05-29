@@ -1,7 +1,7 @@
 // import hljs from 'highlight.js/lib/common';
 import { initThreeJS } from "./threejs";
 
-import { happy, sad, angry, unamused, blink, tick } from "./utils/guy";
+import { blink, tick } from "./utils/guy";
 
 const root = document.querySelector(":root");
 const sleep = (delay: number) =>
@@ -48,6 +48,8 @@ async function glitch() {
     let letter = 0; //Index
     let loops = 5; //How many times it will loop for each letter
 
+    if (!text) return;
+    
     while (letter <= text.length) {
       for (let i = 0; i < loops; i++) {
         for (let i = 0; i < text.length - letter; i++) {
@@ -85,7 +87,7 @@ hero?.addEventListener("mouseenter", async () => {
 });
 
 hero?.addEventListener("mouseleave", async () => {
-  clearInterval(interval);
+  if (interval) clearInterval(interval);
 });
 
 async function load() {
@@ -194,5 +196,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 (window as any).displayModal = displayModal;
 (window as any).submitForm = submitForm;
-(window as any).toggleLike = toggleLike;
 (window as any).toggleTheme = toggleTheme;
