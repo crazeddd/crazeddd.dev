@@ -1,110 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="/fontawesome/css/solid.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
 
-<head>
-  <link href="/fontawesome/css/fontawesome.css" rel="stylesheet" />
-  <link href="/fontawesome/css/brands.css" rel="stylesheet" />
-  <link href="/fontawesome/css/solid.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/src/style.css" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpeg" href="/crnn.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>crazeddd.dev</title>
+  </head>
 
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>crazeddd.dev</title>
-</head>
+  <body style="color-scheme: dark">
+    <!-- <div class="code-wrapper">
+      <pre class="code" id="one"><code>    
+.hero {
+  min-height: 50vh;
+  padding: 6rem 0 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-<body style="color-scheme: dark;">
-  <div class="code-wrapper">
-    <pre class="code" id="one"><code>
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/bg-grad.avif");
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -1;
+}
         </code></pre>
-  </div>
+    </div> -->
+    <!-- <div class="container">
+      <div id="guy">
+        <div class="eye-wrapper" id="left">
+          <div class="eye"></div>
+        </div>
+        <div class="eye-wrapper" id="right">
+          <div class="eye"></div>
+        </div>
+      </div>
+    </div> -->
 
-  <div class="modal" class="hide">
-    <form onsubmit="submitForm(event)">
+    <div class="loading-screen">
+      <h1 class="spinner txt-special"></h1>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+
+    <div class="modal" class="hide">
+      <form onsubmit="submitForm(event)">
+        <div>
+          <h2>Lets Talk</h2>
+          <p class="muted">I'll try to get back within 24 hours.</p>
+        </div>
+        <textarea placeholder="Message" name="message" id="message"></textarea>
+        <div class="row">
+          <button class="primary" onclick="displayModal()">Send Email</button>
+          <button onclick="displayModal()" type="button">Cancel</button>
+        </div>
+        <small
+          ><span class="muted"
+            >In the case you dont have a default email app, reach me manually at </span
+          >cranninja@gmail.com</small
+        >
+      </form>
+    </div>
+
+    <!-- <announcement>Site Under Construction ⚠️</announcement> -->
+    <nav>
       <div>
-        <h2>Lets Talk</h2>
-        <p class="muted">I'll try to get back within 24 hours.</p>
+        <!-- <img class="pfp" src="/73705334.jpg" alt="Crann's Profile Picture" /> -->
+        <a href="/">
+          <h5 class="txt-special">.dev</h5>
+        </a>
       </div>
-      <textarea placeholder="Message" name="message" id="message"></textarea>
-      <div class="row">
-        <button class="primary" onclick="displayModal()">Send Email</button>
-        <button onclick="displayModal()" type="button">Cancel</button>
+      <div class="muted gp-2">
+        <a href="#projects">Projects</a>
+        <a href="/blog">Blog</a>
+        <a href="/music">My Music</a>
       </div>
-      <small><span class="muted">In the case you dont have a default email app, reach me manually at
-        </span>cranninja@gmail.com</small>
-    </form>
-  </div>
-
-  <!-- <announcement>Site Under Construction ⚠️</announcement> -->
-  <nav>
-    <div>
-      <img class="pfp" src="/73705334.jpg" alt="Crazed's Profile Picture" />
-      <h5>CRAZED</h5>
-    </div>
-    <div class="muted gp-2">
-      <a href="#links">Links</a>
-      <a>Blog</a>
-      <a href="#projects">Projects</a>
-    </div>
-    <div>
-      <div class="button-wrapper">
-        <i class="fa-solid fa-moon" style="cursor: pointer;" onclick="toggleTheme()"></i>
-        <button class="nav" onclick="toggleLike(event)">
-          <p id="like-count">0</p>
-          <i class="fa-solid fa-heart"></i>
+      <div>
+        <button class="nav">
+          <i
+            id="theme-toggle"
+            class="fa-solid fa-moon"
+            style="cursor: pointer"
+            onclick="toggleTheme()"
+          ></i>
         </button>
       </div>
-    </div>
-    <div>
-      <i class="fa-solid fa-bars fa-xl"></i>
-    </div>
-  </nav>
-  <section class="hero">
-    <grid></grid>
-    <i class="overlay circle top-left"></i>
-    <i class="overlay plus bottom-right"></i>
-    <div class="column gp-3">
-      <h1>
-        Full Stack Dev and <br /><span class="stroke">Web Designer</span>
-      </h1>
-      <div class="row gp-1">
-        <button class="primary" onclick="displayModal()">Contact Me</button>
-        <button>Resume</button>
+      <div>
+        <i class="fa-solid fa-bars fa-xl"></i>
       </div>
-    </div>
-  </section>
-  <section class="showcase">
-    <div>
-      <big>5+</big>
-      <p class="muted">Years programming</p>
-    </div>
-    <div>
-      <big>3+</big>
-      <p class="muted">Years building websites</p>
-    </div>
-    <div>
-      <big>6+</big>
-      <p class="muted">Years running servers</p>
-    </div>
-  </section>
-  <section class="about">
-    <div>
-      <canvas id="render"></canvas>
-    </div>
-    <div class="column gp-2">
-      <h2>About Me</h2>
-      <p class="muted">
-        Hi I'm Crann (Crazed) a Japanese American highschooler with a passion
-        for coding and computer systems. I enjoy participating in robotics and
-        other software/hardware driven programs. While I do currently mainly
-        do web development I also specialize in server/system administration.
-        When I'm not coding I'm either designing, making music or reading in
-        my spare time. Always open to help with coding or just chat on Discord
-        @crazeddd :)
-      </p>
-    </div>
-  </section>
-  <carousel>
+    </nav>
+    <section class="hero">
+      <grid></grid>
+      <!-- <i class="overlay circle top-left"></i> -->
+      <i class="overlay plus bottom-right"></i>
+      <div class="column gp-3">
+        <h1 id="hero-title">
+          <span>Heya, I'm <span class="txt-special">Crann</span></span>
+        </h1>
+        <div class="row gp-1">
+          <button class="primary" onclick="displayModal()">Contact Me</button>
+          <button>Resume</button>
+        </div>
+      </div>
+    </section>
+    <section class="showcase">
+      <!-- <div class="text-container-gradient"></div>
+      <div class="text-container"></div> -->
+      <i class="overlay plus bottom-left"></i>
+      <div>
+        <big class="txt-special">5+</big>
+        <p class="muted">Years programming</p>
+      </div>
+      <div>
+        <big class="txt-special">3+</big>
+        <p class="muted">Years building websites</p>
+      </div>
+      <div>
+        <big class="txt-special">6+</big>
+        <p class="muted">Years running servers</p>
+      </div>
+    </section>
+    <section class="about">
+      <div>
+        <canvas id="render"></canvas>
+      </div>
+      <div class="column gp-2">
+        <h2>About Me</h2>
+        <p class="muted">
+          Hi I'm Crann (Crazed) a Japanese-American highschooler based in
+          Austin, TX. I build software for the web and run my own
+          <a
+            class="txt-primary txt-ul"
+            href="https://kibihost.com"
+            target="_blank"
+            >server host</a
+          >. I also participate in FIRST robotics and other software/hardware
+          driven programs. When I'm not coding I'm either designing, making
+          music or reading in my spare time. Always open to help with coding,
+          music prod or design on Discord
+          <span class="txt-primary">@crazeddd</span> :)
+        </p>
+      </div>
+    </section>
+      <carousel>
     <i class="fa-brands fa-js fa-4x"></i>
     <i class="fa-brands fa-java fa-4x"></i>
     <i class="fa-brands fa-html5 fa-4x"></i>
@@ -138,99 +189,174 @@
     <i class="fa-brands fa-node-js fa-4x"></i>
     <i class="fa-brands fa-linux fa-4x"></i>
   </carousel>
-  <section class="projects" id="projects">
-    <div class="column gp-2">
-      <i class="overlay plus top-left"></i>
-      <img src="/kibi.png" />
-      <div class="column gp-2">
-        <div>
-          <a href="https://kibihost.com" target="_blank">
-            <h4>
-              Kibi Host
-              <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
-            </h4>
-          </a>
-          <p class="muted">
-            A small server host that aims at giving quality server hosting at
-            a cheap price.
-          </p>
+    <section class="projects" id="projects">
+      <div class="project-item">
+        <i class="overlay plus top-left"></i>
+        <div class="project-item-image">
+          <img src="/kibi.png" />
         </div>
-        <div class="row wrap gp-0-5">
-          <tag>SolidJs</tag>
-          <tag>MongoDB</tag>
-          <tag>Docker</tag>
-          <div class="break"></div>
-          <tag>Pterodactyl</tag>
-          <tag>Traefik</tag>
-        </div>
-      </div>
-    </div>
-    <div class="column gp-2">
-      <img src="/simple.png" />
-      <div class="column gp-2">
-        <i class="overlay plus bottom-right"></i>
-        <div>
-          <a href="https://github.com/crazeddd/simple-minecraft-panel" target="_blank">
-            <h4>
-              Simple Panel
-              <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
-            </h4>
-          </a>
-          <p class="muted">
-            A simple lightweight Docker container manager, built with game
-            servers in mind.
-          </p>
-        </div>
-        <div class="row wrap gp-0-5">
-          <tag>React</tag>
-          <tag>Express</tag>
-          <tag>SQLite</tag>
-        </div>
-      </div>
-    </div>
-    <div class="column gp-2">
-      <img src="/cirkit.png" />
-      <div class="column gp-2">
-        <i class="overlay plus bottom-right"></i>
-        <div>
-          <a href="https://cirkit.crazeddd.dev" target="_blank">
-            <h4>
-              Cirkit
-              <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
-            </h4>
-          </a>
-          <p class="muted">
-            A build kit company led by students for students.
-          </p>
-        </div>
-        <div class="row wrap gp-0-5">
-          <tag>React</tag>
-          <tag>Stripe</tag>
-          <tag>Supabase</tag>
-          <div class="break"></div>
-          <tag>Spline</tag>
-          <tag>Bootstrap</tag>
+        <div class="project-item-content">
+          <div class="column gp-1">
+            <small class="muted">2026</small>
+            <a href="https://kibihost.com" target="_blank">
+              <h4>
+                Kibi Host
+                <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
+              </h4>
+            </a>
+            <p class="muted">
+              A small server host that aims at giving quality server hosting at
+              a cheap price. Primarily focused on Minecraft servers, but also
+              offers general purpose hosting. I started Kibi in late 2025 and
+              have recently now in 2026 publicly launched it after a few months
+              of private testing.
+            </p>
+          </div>
+          <div class="row wrap gp-0-5">
+            <tag>SolidJs</tag>
+            <tag>MongoDB</tag>
+            <tag>Docker</tag>
+            <div class="break"></div>
+            <tag>Pterodactyl</tag>
+            <tag>Traefik</tag>
+          </div>
+          <div class="project-footer">
+            <a
+              class="project-link"
+              href="https://github.com/kibi-host"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              class="project-link"
+              href="https://www.youtube.com/@KibiHost"
+              target="_blank"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a
+              class="project-link"
+              href="https://discord.gg/QYXGpwSxFH"
+              target="_blank"
+            >
+              <i class="fa-brands fa-discord"></i>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="links" id="links">
-    <div>
-      <h2>Links</h2>
-      <hr />
-      <div class="row gp-1">
-        <a href="https://github.com/crazeddd" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
-        <a href="" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-        <a href="https://codepen.io/crazeddd" target="_blank"><i class="fa-brands fa-codepen fa-xl"></i></a>
+      <div class="project-item">
+        <div class="project-item-image green-filter">
+          <img src="/simple.png" />
+        </div>
+        <div class="project-item-content">
+          <i class="overlay plus bottom-right"></i>
+          <div class="column gp-1">
+            <small class="muted">2024</small>
+            <a
+              href="https://github.com/crazeddd/simple-minecraft-panel"
+              target="_blank"
+            >
+              <h4>
+                Simple Panel
+                <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
+              </h4>
+            </a>
+            <p class="muted">
+              A simple lightweight Docker container manager, built with game
+              servers in mind. Originally meant to be the backend for Kibi Host,
+              but ended up backing off due to time constraints and the fact that
+              other alternatives like Pterodactyl already exist.
+            </p>
+          </div>
+          <div class="row wrap gp-0-5">
+            <tag>React</tag>
+            <tag>Express</tag>
+            <tag>MongoDB</tag>
+            <div class="break"></div>
+            <tag>Docker</tag>
+          </div>
+          <div class="project-footer">
+            <a
+              class="project-link"
+              href="https://github.com/crazeddd/simple-minecraft-panel"
+              target="_blank"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-  <footer>
-    <p>Made with <i class="fa-solid fa-heart"></i> by Crazed</p>
-    <small class="muted">© 2025 Crann Bisson-Donahue. <a href="LICENSE">License.</a></small>
-  </footer>
-
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
+      <div class="project-item">
+        <div class="project-item-image red-filter">
+          <img src="/cirkit.png" />
+        </div>
+        <div class="project-item-content">
+          <i class="overlay plus bottom-right"></i>
+          <div class="column gp-1">
+            <small class="muted">2025</small>
+            <a href="https://cirkit.crazeddd.dev" target="_blank">
+              <h4>
+                Cirkit
+                <i class="fa-solid fa-arrow-up-right-from-square fa-2xs"></i>
+              </h4>
+            </a>
+            <p class="muted">
+              A build kit company led by students for students. Our goal was to
+              make it easy and affordable for students to get into working with
+              hardware and software. I worked on Cirkit's website and backend
+              store, which was built on Supabase with a Stripe checkout
+              integration.
+            </p>
+          </div>
+          <div class="row wrap gp-0-5">
+            <tag>React</tag>
+            <tag>Stripe</tag>
+            <tag>Supabase</tag>
+            <div class="break"></div>
+            <tag>Spline</tag>
+            <tag>Bootstrap</tag>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="project-footer">
+        <h1>See All -></h1>
+      </div> -->
+    </section>
+    <section class="links" id="links">
+      <div>
+        <h2 class="txt-special">Links</h2>
+        <hr />
+        <div class="row gp-1">
+          <a href="https://github.com/crazeddd" target="_blank"
+            ><i class="fa-brands fa-github fa-xl"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/crann-bisson-donahue-b71b52332/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin fa-xl"></i
+          ></a>
+          <a href="https://codepen.io/crazeddd" target="_blank"
+            ><i class="fa-brands fa-codepen fa-xl"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>Made with <i class="fa-solid fa-heart"></i> by Crazed</p>
+      <small class="muted">
+        © 2026 Crann Bisson-Donahue. All Rights Reserved. <br />
+      </small>
+      <small class="muted">
+        <a
+          class="txt-ul"
+          href="https://github.com/crazeddd/crazeddd.dev"
+          target="_blank"
+        >
+          Github.</a
+        >
+      </small>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
