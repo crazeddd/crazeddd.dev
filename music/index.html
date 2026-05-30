@@ -5,7 +5,7 @@
     <link href="/fontawesome/css/brands.css" rel="stylesheet" />
     <link href="/fontawesome/css/solid.css" rel="stylesheet" />
     <link rel="stylesheet" href="/src/style.css" />
-    <link rel="stylesheet" href="/src/styles/blog.css" />
+    <link rel="stylesheet" href="/src/styles/music.css" />
 
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/crnn.jpg" />
@@ -14,11 +14,7 @@
   </head>
 
   <body style="color-scheme: dark">
-    <!-- <announcement
-      ><i class="fa-solid fa-exclamation-triangle"></i> 
-      Page Not Finished Yet
-      <i class="fa-solid fa-exclamation-triangle"></i
-    ></announcement> -->
+    <!-- <announcement>Site Under Construction ⚠️</announcement> -->
     <!-- <div class="container">
       <div id="guy">
         <div class="eye-wrapper" id="left">
@@ -38,8 +34,8 @@
       </div>
       <div class="muted gp-2">
         <a href="#projects">Projects</a>
-        <a href="/blog">Blog</a>
-        <a href="/music">My Music</a>
+        <a href="/blog/">Blog</a>
+        <a href="/music/">My Music</a>
       </div>
       <div>
         <button class="nav">
@@ -63,35 +59,56 @@
       <i class="overlay plus bottom-right"></i>
       <div class="column gp-3">
         <h1 id="hero-title">
-          <span>Blog.</span>
+          <span>Music By CRNN</span>
         </h1>
         <p class="muted">
-          I'll update this with an actual post later.
+          A collection of snippets and demos that I've made.
         </p>
+        <div class="project-footer">
+          <a
+            class="project-link"
+            href="https://soundcloud.com/crnn1"
+            target="_blank"
+          >
+            <i class="fa-brands fa-soundcloud"></i>
+          </a>
+          <a
+            class="project-link"
+            href="https://www.bandlab.com/crnn1"
+            target="_blank"
+          >
+            <i class="fa-solid fa-record-vinyl"></i>
+          </a>
+          <!-- <a
+            class="project-link"
+            href=""
+            target="_blank"
+          >
+            <i class="fa-brands fa-bandcamp"></i>
+          </a> -->
+        </div>
       </div>
     </section>
-    <section class="blogs">
-      <div class="blog-post">
-        <div>
-          <h5>How To Center a Div</h5>
-          <p class="muted">
-            A comprehensive guide on centering a div using CSS.
-          </p>
-        </div>
-        <div>
-          <h1 class="txt-special">01</h1>
-        </div>
-      </div>
-      <div class="blog-post">
-        <div>
-          <h5>What is error 418?</h5>
-          <p class="muted">We no longer serve coffee here.</p>
-        </div>
-        <div>
-          <h1 class="txt-special">02</h1>
-        </div>
-      </div>
+    <section class="songs">
+      <div class="songs-grid"></div>
     </section>
+    <div class="audio-player">
+      <div class="row gp-1">
+        <button id="previous-button">
+          <i class="fa-solid fa-step-backward"></i>
+        </button>
+        <button id="play-button"><i class="fa-solid fa-play"></i></button>
+        <button id="next-button">
+          <i class="fa-solid fa-step-forward"></i>
+        </button>
+      </div>
+      <div class="seek-bar-wrapper">
+        <span id="current-time">0:00</span>
+        <input type="range" id="seek-bar" value="0" min="0" max="100" />
+        <span id="duration">0:00</span>
+      </div>
+      <!-- <input type="range" id="volume" min="0" max="1" step="0.01" value="1" /> -->
+    </div>
     <footer>
       <p>Made with <i class="fa-solid fa-heart"></i> by Crazed</p>
       <small class="muted">
