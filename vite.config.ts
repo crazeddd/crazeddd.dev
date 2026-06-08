@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         blog: resolve(__dirname, 'blog/index.html'),
         music: resolve(__dirname, 'music/index.html'),
+        resume: resolve(__dirname, 'resume/index.html'),
       },
     },
   },
