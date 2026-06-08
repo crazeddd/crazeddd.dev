@@ -49,7 +49,7 @@ async function glitch() {
     let loops = 5; //How many times it will loop for each letter
 
     if (!text) return;
-    
+
     while (letter <= text.length) {
       for (let i = 0; i < loops; i++) {
         for (let i = 0; i < text.length - letter; i++) {
@@ -67,28 +67,28 @@ async function glitch() {
   });
 }
 
-const hero = document.querySelector(".hero") as HTMLDivElement | null;
-const text = document.querySelector(".text-container") as HTMLDivElement | null;
-let interval: ReturnType<typeof setInterval> | null = null;
+// const hero = document.querySelector(".hero") as HTMLDivElement | null;
+// const text = document.querySelector(".text-container") as HTMLDivElement | null;
+// let interval: ReturnType<typeof setInterval> | null = null;
 
-async function randomString(length: number) {
-  const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  let result = "";
-  for (let i = 0; i < length; i++) {
-    result += chars.charAt(Math.floor(Math.random() * chars.length));
-  }
-  text!.innerText = result;
-}
+// async function randomString(length: number) {
+//   const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+//   let result = "";
+//   for (let i = 0; i < length; i++) {
+//     result += chars.charAt(Math.floor(Math.random() * chars.length));
+//   }
+//   text!.innerText = result;
+// }
 
-hero?.addEventListener("mouseenter", async () => {
-  interval = setInterval(async () => {
-    await randomString(2500);
-  }, 30);
-});
+// hero?.addEventListener("mouseenter", async () => {
+//   interval = setInterval(async () => {
+//     await randomString(2500);
+//   }, 30);
+// });
 
-hero?.addEventListener("mouseleave", async () => {
-  if (interval) clearInterval(interval);
-});
+// hero?.addEventListener("mouseleave", async () => {
+//   if (interval) clearInterval(interval);
+// });
 
 async function load() {
   const loadingScreen = document.querySelector(
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initThreeJS();
   glitch();
-  randomString(2500);
+  // randomString(2500);
   load();
   requestAnimationFrame(tick);
   setInterval(blink, 5000);
