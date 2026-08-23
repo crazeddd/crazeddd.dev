@@ -1,42 +1,11 @@
-// import hljs from 'highlight.js/lib/common';
-import { initThreeJS } from "./threejs";
+const train = document.querySelector(".train") as HTMLDivElement | null;
+const heroBody = document.querySelector(".hero-body") as HTMLDivElement | null;
 
 import { blink, tick } from "./utils/guy";
 
 const root = document.querySelector(":root");
 const sleep = (delay: number) =>
   new Promise((resolve) => setTimeout(resolve, delay));
-
-function displayModal() {
-  const modal = document.querySelector(".modal") as HTMLDivElement;
-  modal.classList.toggle("show");
-}
-
-function submitForm(event: Event) {
-  event.preventDefault();
-  const form = event.target as HTMLFormElement;
-  const message = encodeURIComponent(form["message"].value);
-  const email = "cranninja@gmail.com";
-
-  const mailtoLink = `mailto:${email}?subject=${message}`;
-  window.location.href = mailtoLink;
-}
-
-function toggleTheme() {
-  const body = document.querySelector("body") as HTMLBodyElement | null;
-  const button = document.getElementById(
-    "theme-toggle",
-  ) as HTMLButtonElement | null;
-
-  if (body && button) {
-    body.style.colorScheme =
-      body.style.colorScheme === "dark" ? "light" : "dark";
-    button.className =
-      body.style.colorScheme === "dark"
-        ? "fa-solid fa-moon"
-        : "fa-solid fa-sun";
-  }
-}
 
 async function glitch() {
   const chars = "1234567890.".split("");
@@ -166,10 +135,28 @@ async function load() {
   loadingScreen.style.pointerEvents = "none";
 }
 
+function runTrain() {
+  if (!train || !heroBody) return;
+  let start = performance.now();
+  // heroBody.style.animation = "screen-shake 0.5s ease-in-out infinite";
+  requestAnimationFrame(function animate(time) {
+    let elapsed = time - start;
+    let progress = (elapsed % 8000) / 8000;
+    let pos = -30 + progress * 160;
+
+    train.style.backgroundPosition = `${pos}% 50%`;
+
+    if (elapsed < 8000) requestAnimationFrame(animate);
+  });
+  setTimeout(() => {
+    heroBody.style.animation = "";
+  }, 8000);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   for (const item of document.querySelectorAll("grid")) {
     const parent = item.parentElement;
-    let col = 16,
+    let col = 14,
       row = 8;
     if (!parent) continue;
 
@@ -186,14 +173,13 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(width, height, itemSize, row);
   }
 
-  initThreeJS();
   glitch();
   // randomString(2500);
   load();
   requestAnimationFrame(tick);
   setInterval(blink, 5000);
+  setTimeout(runTrain, 1000);
+  setInterval(runTrain, 20000);
 });
 
-(window as any).displayModal = displayModal;
-(window as any).submitForm = submitForm;
-(window as any).toggleTheme = toggleTheme;
+// (window as any).displayModal = displayModal;

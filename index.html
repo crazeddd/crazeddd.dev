@@ -1,44 +1,20 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <link href="/fontawesome/css/fontawesome.css" rel="stylesheet" />
-    <link href="/fontawesome/css/brands.css" rel="stylesheet" />
-    <link href="/fontawesome/css/solid.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/style.css" />
 
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/crnn.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>crazeddd.dev</title>
-  </head>
+<head>
+  <link href="/fontawesome/css/fontawesome.css" rel="stylesheet" />
+  <link href="/fontawesome/css/brands.css" rel="stylesheet" />
+  <link href="/fontawesome/css/solid.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
 
-  <body style="color-scheme: dark">
-    <!-- <div class="code-wrapper">
-      <pre class="code" id="one"><code>    
-.hero {
-  min-height: 50vh;
-  padding: 6rem 0 6rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpeg" href="/crnn.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>crazeddd.dev</title>
+</head>
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("/bg-grad.avif");
-  background-size: cover;
-  opacity: 0.4;
-  z-index: -1;
-}
-        </code></pre>
-    </div> -->
-    <!-- <div class="container">
+<body style="color-scheme: light">
+  <!-- <div class="container">
       <div id="guy">
         <div class="eye-wrapper" id="left">
           <div class="eye"></div>
@@ -49,99 +25,105 @@
       </div>
     </div> -->
 
-    <!-- <div class="loading-screen">
+  <!-- <div class="loading-screen">
       <h1 class="spinner txt-special"></h1>
       <div class="progress-container">
         <div class="progress-bar"></div>
       </div>
     </div> -->
 
-    <div class="modal" class="hide">
-      <form onsubmit="submitForm(event)">
-        <div>
-          <h2>Lets Talk</h2>
-          <p class="muted">I'll try to get back within 24 hours.</p>
-        </div>
-        <textarea placeholder="Message" name="message" id="message"></textarea>
-        <div class="row">
-          <button class="primary" onclick="displayModal()">Send Email</button>
-          <button onclick="displayModal()" type="button">Cancel</button>
-        </div>
-        <small
-          ><span class="muted"
-            >In the case you dont have a default email app, reach me manually at </span
-          >cranninja@gmail.com</small
-        >
-        <div class="row gp-1">
-          <a href="https://github.com/crazeddd" target="_blank"
-            ><i class="fa-brands fa-github fa-xl"></i
-          ></a>
-          <a
-            href="https://www.linkedin.com/in/crann-bisson-donahue-b71b52332/"
-            target="_blank"
-            ><i class="fa-brands fa-linkedin fa-xl"></i
-          ></a>
-          <a href="https://codepen.io/crazeddd" target="_blank"
-            ><i class="fa-brands fa-codepen fa-xl"></i
-          ></a>
-        </div>
-      </form>
-    </div>
+  <div class="modal" class="hide">
+    <form onsubmit="submitForm(event)">
+      <div>
+        <h2>Lets Talk</h2>
+        <p class="muted">I'll try to get back within 24 hours.</p>
+      </div>
+      <textarea placeholder="Message" name="message" id="message"></textarea>
+      <div class="row">
+        <button class="primary" onclick="displayModal()">Send Email</button>
+        <button onclick="displayModal()" type="button">Cancel</button>
+      </div>
+      <small><span class="muted">In the case you dont have a default email app, reach me manually at
+        </span>cranninja@gmail.com</small>
+      <div class="row gp-1">
+        <a href="https://github.com/crazeddd" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+        <a href="https://www.linkedin.com/in/crann-bisson-donahue-b71b52332/" target="_blank"><i
+            class="fa-brands fa-linkedin fa-xl"></i></a>
+        <a href="https://codepen.io/crazeddd" target="_blank"><i class="fa-brands fa-codepen fa-xl"></i></a>
+      </div>
+    </form>
+  </div>
 
-    <!-- <announcement>Site Under Construction ⚠️</announcement> -->
-    <nav>
-      <div>
-        <!-- <img class="pfp" src="/73705334.jpg" alt="Crann's Profile Picture" /> -->
-        <a href="/">
-          <h5 class="txt-special">Crann</h5>
-        </a>
-      </div>
-      <div class="muted gp-2">
-        <a href="#projects">Projects</a>
-        <a href="/blog/">Blog</a>
-        <a href="/music/">My Music</a>
-      </div>
-      <div>
-        <button class="nav">
-          <i
-            id="theme-toggle"
-            class="fa-solid fa-moon"
-            style="cursor: pointer"
-            onclick="toggleTheme()"
-          ></i>
-        </button>
-      </div>
-      <div>
-        <i class="fa-solid fa-bars fa-xl"></i>
-      </div>
-    </nav>
-    <section class="hero">
-      <grid></grid>
-      <!-- <i class="overlay circle top-left"></i> -->
-      <i class="overlay plus bottom-right"></i>
-      <div class="column gp-3">
-        <div class="row">
-        <h5>
-          <pre>
-                         
- _____ _____ __ __ _____ 
-|  |  |   __|  |  |  _  |
-|     |   __|_   _|     |
-|__|__|_____| |_| |__|__|
-                         </pre
-          >
-        </h5>
-        <h1 class="hero-title">👋</h1>
+  <!-- <announcement>Site Under Construction ⚠️</announcement> -->
+  <section class="hero">
+    <!-- <nav>
+        <div>
+          <a href="/">
+            <h5>hi</h5>
+          </a>
         </div>
-        <div class="row gp-1">
+        <div class="muted gp-2">
+          <a href="#projects">Projects</a>
+          <a href="/blog/">Blog</a>
+          <a href="/music/">My Music</a>
+        </div>
+        <div>
+          <button class="nav">
+            <i
+              id="theme-toggle"
+              class="fa-solid fa-moon"
+              style="cursor: pointer"
+              onclick="toggleTheme()"
+            ></i>
+          </button>
+        </div>
+        <div>
+          <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+      </nav> -->
+    <!-- <grid></grid> -->
+    <div class="hero-body">
+      <!-- <i class="overlay plus bottom-right"></i> -->
+      <nav>
+        <div>
+          <a class="button equal-padding" href="/">
+            <h5>.dev</h5>
+          </a>
+        </div>
+        <div>
+          <a class="button secondary" href="/projects">Projects</a>
+          <a class="button secondary" href="/resume">Resume</a>
+          <a class="button secondary" href="/blog">Blog</a>
+        </div>
+        <div>
+          <button class="button equal-padding">
+            <i class="fa-solid fa-bars fa-xl"></i>
+          </button>
+        </div>
+      </nav>
+      <!-- <h1 id="hero-title">CRAN<span id="hero-hanging-txt">N</span></h1> -->
+      <div class="hero-content">
+        <h1>CRANN</h1>
+        <p class="muted">Haha train go BRRRR.</p>
+        <div class="row gp-1 muted">
+          <a href="https://github.com/crazeddd" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+          <a href="https://www.linkedin.com/in/crann-bisson-donahue-b71b52332/" target="_blank"><i
+              class="fa-brands fa-linkedin fa-xl"></i></a>
+          <a href="https://codepen.io/crazeddd" target="_blank"><i class="fa-brands fa-codepen fa-xl"></i></a>
+        </div>
+      </div>
+      <div class="train"></div>
+
+
+      <!-- <div class="row gp-1">
           <button class="primary" onclick="displayModal()">Contact Me</button>
           <button onclick="window.open('/resume', '_blank')">Resume</button>
-        </div>
-      </div>
-    </section>
-    <section class="showcase">
-      <!-- <div class="text-container-gradient"></div>
-      <div class="text-container"></div> -->
+        </div> -->
+    </div>
+  </section>
+  <!-- <section class="showcase">
+      <div class="text-container-gradient"></div>
+      <div class="text-container"></div>
       <i class="overlay plus bottom-left"></i>
       <div>
         <big class="txt-special">5+</big>
@@ -155,68 +137,28 @@
         <big class="txt-special">6+</big>
         <p class="muted">Years running servers</p>
       </div>
+    </section> -->
+  <!-- <section class="about">
+      <h2>About Me</h2>
+      <p class="muted">
+        Hi I'm Crann (Crazed) a Japanese-American highschooler based in Austin,
+        TX. I do web dev and run my own
+        <a
+          class="txt-primary txt-ul"
+          href="https://kibihost.com"
+          target="_blank"
+          >server host</a
+        >. I also participate in FIRST robotics and other software/hardware
+        driven programs. When I'm not coding I'm either designing, making music
+        or reading in my spare time. Always open to help with coding, music prod
+        or design on Discord <span class="txt-primary">@crazeddd</span> :)
+      </p>
     </section>
-    <section class="about">
-      <div>
-        <canvas id="render"></canvas>
-      </div>
-      <div class="column gp-2">
-        <h2>About Me</h2>
-        <p class="muted">
-          Hi I'm Crann (Crazed) a Japanese-American highschooler based in
-          Austin, TX. I do web dev and run my own
-          <a
-            class="txt-primary txt-ul"
-            href="https://kibihost.com"
-            target="_blank"
-            >server host</a
-          >. I also participate in FIRST robotics and other software/hardware
-          driven programs. When I'm not coding I'm either designing, making
-          music or reading in my spare time. Always open to help with coding,
-          music prod or design on Discord
-          <span class="txt-primary">@crazeddd</span> :)
-        </p>
-      </div>
-    </section>
-    <carousel>
-      <i class="fa-brands fa-js fa-4x"></i>
-      <i class="fa-brands fa-java fa-4x"></i>
-      <i class="fa-brands fa-html5 fa-4x"></i>
-      <i class="fa-brands fa-css fa-4x"></i>
-      <i class="fa-brands fa-ubuntu fa-4x"></i>
-      <i class="fa-brands fa-python fa-4x"></i>
-      <i class="fa-brands fa-docker fa-4x"></i>
-      <i class="fa-brands fa-react fa-4x"></i>
-      <i class="fa-brands fa-node-js fa-4x"></i>
-      <i class="fa-brands fa-linux fa-4x"></i>
-
-      <i class="fa-brands fa-js fa-4x"></i>
-      <i class="fa-brands fa-java fa-4x"></i>
-      <i class="fa-brands fa-html5 fa-4x"></i>
-      <i class="fa-brands fa-css fa-4x"></i>
-      <i class="fa-brands fa-ubuntu fa-4x"></i>
-      <i class="fa-brands fa-python fa-4x"></i>
-      <i class="fa-brands fa-docker fa-4x"></i>
-      <i class="fa-brands fa-react fa-4x"></i>
-      <i class="fa-brands fa-node-js fa-4x"></i>
-      <i class="fa-brands fa-linux fa-4x"></i>
-
-      <i class="fa-brands fa-js fa-4x"></i>
-      <i class="fa-brands fa-java fa-4x"></i>
-      <i class="fa-brands fa-html5 fa-4x"></i>
-      <i class="fa-brands fa-css fa-4x"></i>
-      <i class="fa-brands fa-ubuntu fa-4x"></i>
-      <i class="fa-brands fa-python fa-4x"></i>
-      <i class="fa-brands fa-docker fa-4x"></i>
-      <i class="fa-brands fa-react fa-4x"></i>
-      <i class="fa-brands fa-node-js fa-4x"></i>
-      <i class="fa-brands fa-linux fa-4x"></i>
-    </carousel>
     <section class="projects" id="projects">
       <div class="project-item">
         <i class="overlay plus top-left"></i>
         <div class="project-item-image">
-          <img src="/kibi.png" />
+          <img src="/imgs/kibi.png" />
         </div>
         <div class="project-item-content">
           <div class="column gp-1">
@@ -270,7 +212,7 @@
       </div>
       <div class="project-item">
         <div class="project-item-image green-filter">
-          <img src="/simple.png" />
+          <img src="/imgs/simple.png" />
         </div>
         <div class="project-item-content">
           <i class="overlay plus bottom-right"></i>
@@ -312,7 +254,7 @@
       </div>
       <div class="project-item">
         <div class="project-item-image red-filter">
-          <img src="/cirkit.png" />
+          <img src="/imgs/cirkit.png" />
         </div>
         <div class="project-item-content">
           <i class="overlay plus bottom-right"></i>
@@ -342,9 +284,6 @@
           </div>
         </div>
       </div>
-      <!-- <div class="project-footer">
-        <h1>See All -></h1>
-      </div> -->
     </section>
     <section class="links" id="links">
       <div>
@@ -379,7 +318,8 @@
           Github.</a
         >
       </small>
-    </footer>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    </footer> -->
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
 </html>
